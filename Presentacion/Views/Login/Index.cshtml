@@ -1,0 +1,108 @@
+﻿@{
+    Layout = null;
+}
+
+@*<!DOCTYPE html>
+
+<html>
+<br />
+<br />
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link href="~/Content/css/login.css" rel="stylesheet" />
+    <!------ Include the above in your HEAD tag ---------->
+    <title>Index</title>
+</head>
+<body>
+    <div>
+
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-md-4 col-md-offset-4">
+                    <h1 class="text-center login-title">Pandora</h1>
+                    <div class="account-wall text-center">
+                        <img class="profile-img center-block" src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=120"
+                             alt="">
+                        <form class="form-signin" method="post" action="@Url.Action("Login")">
+                            <input name="correo" type="text" class="form-control" placeholder="Email" required autofocus>
+                            <input name="contrasena" type="password" class="form-control" placeholder="Password" required>
+                            <button class="btn btn-lg btn-primary btn-block" type="submit">
+                                Sign in
+                            </button>
+
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+*@
+
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<html>
+
+
+<head>
+    <link rel="stylesheet" href="~/css/estilo.css" asp-append-version="true" />
+</head>
+<body>
+
+
+    <section class="login-block fullscreen-background">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 login-sec">
+                <h2 class="text-center">Pandora</h2>
+                <form class="login-form"  method="post" action="@Url.Action("Login")">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1" class="text-uppercase">Nombre de Usuario</label>
+                            <input type="text" name="correo" class="form-control" placeholder="Email" required autofocus>
+
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1" class="text-uppercase">Contraseña</label>
+                            <input name ="contrasena" type="password" class="form-control" placeholder="Password" required>
+                    </div>
+
+
+                    <div class="form-check">
+                       
+                        <button type="submit" class="btn btn-login float-lg-end">Submit</button>
+                    </div>
+
+                </form>
+               
+            </div>
+            <div class="col-md-8 banner-sec">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                   
+                    <div class="carousel-inner" role="listbox">
+                        <div class="carousel-item active">
+                                <img class="d-block img-fluid" src="~/Imagen/fondo.jpg " alt="First slide">
+                            <div class="carousel-caption d-none d-md-block">
+                                <div class="banner-text">
+                                    <h2>Explora la elegancia</h2>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
+                                </div>
+                            </div>
+                        </div>
+                    
+                    </div>
+
+                </div>
+            </div>
+        </div>
+</section>
+</body>
+</html>

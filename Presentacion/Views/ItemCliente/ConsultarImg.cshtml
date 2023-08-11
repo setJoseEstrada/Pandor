@@ -1,0 +1,71 @@
+﻿@model IEnumerable<Datos.Models.Imagen>
+
+@{
+    ViewBag.Title = "Catalogo";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h2>
+    Catalogo de Imagenes
+</h2>
+
+@*<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-md-4 mb-4">
+            <div class="card d-flex align-items-stretch">
+                <img src="data:image/jpeg;base64,@Convert.ToBase64String(item.Imagen1)" class="card-img-top" alt="Imagen">
+                <div class="card-body">
+                    <h5 class="card-title">@item.Nombre</h5>
+                  
+                </div>
+            </div>
+        </div>
+    }
+</div>*@
+
+
+<table class=" table table-condensed table-striped table-responsive table-hover">
+
+    <tr>
+        <th>
+            Nombre
+        </th>
+        <th>
+            Imagen
+        </th>
+      
+        
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                <img src="data:image/jpeg;base64,@Convert.ToBase64String(item.Imagen1)" class="card-img-top" id="imagenSeleccionada" alt="Imagen seleccionada" style="max-width: 100px; max-height: 100px;">
+            </td>
+
+
+
+           @* <td> @Html.ActionLink("Agregar", "Create", new { id = item.Id }, new { @class = "btn btn-danger" })</td>*@
+            <td>
+
+                <form method="post" action="@Url.Action("Create")">
+                    <input type="hidden" name="imagenId" value= @item.Id   />
+                    <input type="submit" value="Create" class="btn btn-default" />
+                </form>
+                
+            </td>
+        </tr>
+    }
+
+</table>
+
+
+
+
